@@ -36,14 +36,14 @@
                             <div>
                                 <x-input-label for="PINo" value="PI Number" />
                                 <x-text-input id="PINo" name="PINo" type="text" class="mt-1 block w-full"
-                                              :value="old('PINo')" required />
+                                              :value="old('PINo')" />
                                 <x-input-error :messages="$errors->get('PINo')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="PIDate" value="PI Date" />
                                 <x-text-input id="PIDate" name="PIDate" type="date" class="mt-1 block w-full"
-                                              :value="old('PIDate')" required />
+                                              :value="old('PIDate')" />
                                 <x-input-error :messages="$errors->get('PIDate')" class="mt-2" />
                             </div>
 
@@ -51,14 +51,14 @@
                             <div>
                                 <x-input-label for="APValue" value="AP Value" />
                                 <x-text-input id="APValue" name="APValue" type="number" step="0.01" class="mt-1 block w-full"
-                                              :value="old('APValue')" required />
+                                              :value="old('APValue')" />
                                 <x-input-error :messages="$errors->get('APValue')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="APDate" value="AP Date" />
                                 <x-text-input id="APDate" name="APDate" type="date" class="mt-1 block w-full"
-                                              :value="old('APDate')" required />
+                                              :value="old('APDate')" />
                                 <x-input-error :messages="$errors->get('APDate')" class="mt-2" />
                             </div>
 
@@ -66,21 +66,21 @@
                             <div>
                                 <x-input-label for="CINo" value="CI Number" />
                                 <x-text-input id="CINo" name="CINo" type="text" class="mt-1 block w-full"
-                                              :value="old('CINo')" required />
+                                              :value="old('CINo')" />
                                 <x-input-error :messages="$errors->get('CINo')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="CIValue" value="CI Value" />
                                 <x-text-input id="CIValue" name="CIValue" type="number" step="0.01" class="mt-1 block w-full"
-                                              :value="old('CIValue')" required />
+                                              :value="old('CIValue')" />
                                 <x-input-error :messages="$errors->get('CIValue')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="CIDate" value="CI Date" />
                                 <x-text-input id="CIDate" name="CIDate" type="date" class="mt-1 block w-full"
-                                              :value="old('CIDate')" required />
+                                              :value="old('CIDate')" />
                                 <x-input-error :messages="$errors->get('CIDate')" class="mt-2" />
                             </div>
 
@@ -88,14 +88,14 @@
                             <div>
                                 <x-input-label for="BLNo" value="BL Number" />
                                 <x-text-input id="BLNo" name="BLNo" type="text" class="mt-1 block w-full"
-                                              :value="old('BLNo')" required />
+                                              :value="old('BLNo')" />
                                 <x-input-error :messages="$errors->get('BLNo')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="BLDate" value="BL Date" />
                                 <x-text-input id="BLDate" name="BLDate" type="date" class="mt-1 block w-full"
-                                              :value="old('BLDate')" required />
+                                              :value="old('BLDate')" />
                                 <x-input-error :messages="$errors->get('BLDate')" class="mt-2" />
                             </div>
 
@@ -103,21 +103,21 @@
                             <div>
                                 <x-input-label for="ETA" value="ETA" />
                                 <x-text-input id="ETA" name="ETA" type="date" class="mt-1 block w-full"
-                                              :value="old('ETA')" required />
+                                              :value="old('ETA')" />
                                 <x-input-error :messages="$errors->get('ETA')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="BPValue" value="BP Value" />
                                 <x-text-input id="BPValue" name="BPValue" type="number" step="0.01" class="mt-1 block w-full"
-                                              :value="old('BPValue')" required />
+                                              :value="old('BPValue')" />
                                 <x-input-error :messages="$errors->get('BPValue')" class="mt-2" />
                             </div>
 
                             <div>
                                 <x-input-label for="BPDate" value="BP Date" />
                                 <x-text-input id="BPDate" name="BPDate" type="date" class="mt-1 block w-full"
-                                              :value="old('BPDate')" required />
+                                              :value="old('BPDate')" />
                                 <x-input-error :messages="$errors->get('BPDate')" class="mt-2" />
                             </div>
                         </div>

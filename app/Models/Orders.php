@@ -8,6 +8,7 @@ class Orders extends Model
 {
     protected $primaryKey = 'OrderID';
 
+
     protected $fillable = [
         'VendorName',
         'PQNo',

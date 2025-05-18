@@ -1,5 +1,6 @@
 <x-app-layout>
     <div class="flow-root pb-10">
+        <h1 class="mb-10 text-xl">Order Progress</h1>
         <ul role="list" class="-mb-8 mx-3 sm:mx-10">
             <li>
                 <div class="relative pb-8">
@@ -163,43 +164,44 @@
                         <div>
                             <h3 class="text-lg font-medium text-white mb-2">Purchase Quotation</h3>
                             <p class="text-gray-600">PQNo: {{ $order->PQNo }}</p>
-                            <p class="text-gray-600">Date: {{ $order->PQDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">Date: {{ $order->PQDate ? $order->PQDate->format('M d, Y') : '-' }}</p>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-600 mb-2">PI Details</h3>
-                            <p class="text-gray-600">Number: {{ $order->PINo }}</p>
-                            <p class="text-gray-600">Date: {{ $order->PIDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">Number: {{ $order->PINo ?? '-' }}</p>
+                            <p class="text-gray-600">Date: {{ $order->PIDate ? $order->PIDate->format('M d, Y') : '-' }}</p>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-600 mb-2">AP Details</h3>
-                            <p class="text-gray-600">Value: ${{ number_format($order->APValue, 2) }}</p>
-                            <p class="text-gray-600">Date: {{ $order->APDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">Value: {{ $order->APValue ? '$'.number_format($order->APValue, 2) : '-' }}</p>
+                            <p class="text-gray-600">Date: {{ $order->APDate ? $order->APDate->format('M d, Y') : '-' }}</p>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-600 mb-2">CI Details</h3>
-                            <p class="text-gray-600">Number: {{ $order->CINo }}</p>
-                            <p class="text-gray-600">Value: ${{ number_format($order->CIValue, 2) }}</p>
-                            <p class="text-gray-600">Date: {{ $order->CIDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">Number: {{ $order->CINo ?? '-' }}</p>
+                            <p class="text-gray-600">Value: {{ $order->CIValue ? '$'.number_format($order->CIValue, 2) : '-' }}</p>
+                            <p class="text-gray-600">Date: {{ $order->CIDate ? $order->CIDate->format('M d, Y') : '-' }}</p>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-600 mb-2">BL Details</h3>
-                            <p class="text-gray-600">BLNo: {{ $order->BLNo }}</p>
-                            <p class="text-gray-600">IssueDate: {{ $order->BLDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">BLNo: {{ $order->BLNo ?? '-' }}</p>
+                            <p class="text-gray-600">IssueDate: {{ $order->BLDate ? $order->BLDate->format('M d, Y') : '-' }}</p>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-600 mb-2">Additional Details</h3>
-                            <p class="text-gray-600">ETA: {{ $order->ETA->format('M d, Y') }}</p>
-                            <p class="text-gray-600">BalancePayment Value: ${{ number_format($order->BPValue, 2) }}</p>
-                            <p class="text-gray-600">BalancePayment Date: {{ $order->BPDate->format('M d, Y') }}</p>
+                            <p class="text-gray-600">ETA: {{ $order->ETA ? $order->ETA->format('M d, Y') : '-' }}</p>
+                            <p class="text-gray-600">BalancePayment Value: {{ $order->BPValue ? '$'.number_format($order->BPValue, 2) : '-' }}</p>
+                            <p class="text-gray-600">BalancePayment Date: {{ $order->BPDate ? $order->BPDate->format('M d, Y') : '-' }}</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </x-app-layout>

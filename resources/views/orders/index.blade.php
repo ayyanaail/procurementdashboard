@@ -31,11 +31,11 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-gray-600">{{ $order->VendorName }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-gray-600">
                                     {{ $order->PQNo }} <br>
-                                    <span class="text-sm text-gray-600">{{ $order->PQDate->format('M d, Y') }}</span>
+                                    <span class="text-sm text-gray-600">{{ $order->PQDate ? $order->PQDate->format('M d, Y') : '-' }}</span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-gray-600">
                                     {{ $order->PINo }} <br>
-                                    <span class="text-sm text-gray-600">{{ $order->PIDate->format('M d, Y') }}</span>
+                                    <span class="text-sm text-gray-600">{{ $order->PIDate ? $order->PIDate->format('M d, Y') : '-' }}</span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm">
                                     <a href="{{ route('orders.show', $order) }}" class="text-indigo-400 hover:text-indigo-300 mr-3">View</a>
