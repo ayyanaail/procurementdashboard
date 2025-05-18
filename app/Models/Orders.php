@@ -38,4 +38,5 @@ class Orders extends Model
         'CIValue' => 'decimal:2',
         'BPValue' => 'decimal:2',
     ];
+
 }

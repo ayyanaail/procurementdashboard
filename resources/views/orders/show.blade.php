@@ -1,8 +1,147 @@
 <x-app-layout>
+    <div class="flow-root pb-10">
+        <ul role="list" class="-mb-8 mx-3 sm:mx-10">
+            <li>
+                <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">Created Order to <a href="#" class="font-medium text-gray-900">{{$order->PQNo}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->created_at->toDateString()}} (    {{ $order->created_at->diffForHumans() }}
+)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">PI Received <a href="#" class="font-medium text-gray-900">{{$order->PINo}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->PIDate->toDateString()}} ( {{ $order->PIDate->diffForHumans() }} )
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">Advance Payment: <a href="#" class="font-medium text-gray-900">MVR{{$order->APValue}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->APDate->toDateString()}} ( {{ $order->APDate->diffForHumans() }} )
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative pb-8">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">Commercial Invoice <a href="#" class="font-medium text-gray-900">{{$order->CIValue}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->CIDate->toDateString()}} ( {{ $order->CIDate->diffForHumans() }} )
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative pb-10">
+                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">BL Number <a href="#" class="font-medium text-gray-900">{{$order->BLNo}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->BLDate->toDateString()}} ( {{ $order->BLDate->diffForHumans() }} )
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative pb-8">
+                    <div class="relative flex space-x-3">
+                        <div>
+                            <span class="flex size-8 items-center justify-center rounded-full bg-green-500 ring-8 ring-white">
+                              <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                        </div>
+                        <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                                <p class="text-sm text-gray-500">Balance Payment: <a href="#" class="font-medium text-gray-900">MVR:{{$order->BPValue}}</a></p>
+                            </div>
+                            <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                {{$order->BPDate->toDateString()}} ( {{ $order->BPDate->diffForHumans() }} )
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+{{--    FORM DISPLAY--}}
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-semibold text-white">Order Details</h2>
+                <h2 class="text-xl font-semibold text-gray-600">Order Details</h2>
                 <div>
                     <a href="{{ route('orders.edit', $order) }}" class="px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-500 mr-2">
                         Edit Order
