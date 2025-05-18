@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="ring-1 ring-white/10 rounded-lg bg-gray-800/60 overflow-hidden">
+            <div class="shadow shadow-md rounded-lg bg-gradient-to-r from-rose-600 to-red-500 overflow-hidden">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-white mb-4">Create New Order</h2>
 
