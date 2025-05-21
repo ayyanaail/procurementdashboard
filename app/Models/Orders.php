@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Orders extends Model
@@ -39,5 +40,10 @@ class Orders extends Model
         'CIValue' => 'decimal:2',
         'BPValue' => 'decimal:2',
     ];
+    public function diffInDays($date)
+    {
+        if (!$date) return null;
+        return Carbon::parse($date)->diffInDays(now());
+    }
 
 }

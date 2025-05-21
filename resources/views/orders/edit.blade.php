@@ -33,6 +33,126 @@
                                 <x-input-error :messages="$errors->get('PQDate')" class="mt-2" />
                             </div>
 
+                            <div>
+                                <x-input-label for="PINo" value="PI Number" />
+                                <x-text-input id="PINo" name="PINo" type="text" class="mt-1 block w-full"
+                                              :value="old('PINo', $order->PINo)" />
+                                <x-input-error :messages="$errors->get('PINo')" class="mt-2" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="PIDate" value="PI Date" />
+                                @if(isset($order->PIDate))
+                                    <x-text-input id="PIDate" name="PIDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('PIDate', $order->PIDate->format('Y-m-d'))" />
+                                    <x-input-error :messages="$errors->get('PIDate')" class="mt-2" />
+                                @else
+                                    <x-text-input id="PIDate" name="PIDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('PIDate')" />
+                                    <x-input-error :messages="$errors->get('PIDate')" class="mt-2" />
+                                @endif
+                            </div>
+                            <div>
+                                <x-input-label for="APValue" value="AP Value" />
+                                <x-text-input id="APValue" name="APValue" type="text" class="mt-1 block w-full"
+                                              :value="old('APValue', $order->APValue)" />
+                                <x-input-error :messages="$errors->get('APValue')" class="mt-2" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="APDate" value="AP Date" />
+                                @if(isset($order->APDate))
+                                <x-text-input id="APDate" name="APDate" type="date" class="mt-1 block w-full"
+                                              :value="old('APDate', $order->APDate->format('Y-m-d'))" />
+                                <x-input-error :messages="$errors->get('APDate')" class="mt-2" />
+                                @else
+                                    <x-text-input id="APDate" name="APDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('APDate')" />
+                                    <x-input-error :messages="$errors->get('APDate')" class="mt-2" />
+                                @endif
+                            </div>
+
+                            <div>
+                                <x-input-label for="CINo" value="CI Number" />
+                                <x-text-input id="CINo" name="CINo" type="text" class="mt-1 block w-full"
+                                              :value="old('CINo', $order->CINo)" />
+                                <x-input-error :messages="$errors->get('CINo')" class="mt-2" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="CIValue" value="CI Value" />
+                                <x-text-input id="CIValue" name="CIValue" type="text" class="mt-1 block w-full"
+                                              :value="old('CIValue', $order->CIValue)" />
+                                <x-input-error :messages="$errors->get('CIValue')" class="mt-2" />
+                            </div>
+                            <div>
+                                <x-input-label for="CIDate" value="CI Date" />
+                                @if(isset($order->CIDate))
+                                    <x-text-input id="CIDate" name="CIDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('CIDate', $order->CIDate->format('Y-m-d'))" />
+                                    <x-input-error :messages="$errors->get('CIDate')" class="mt-2" />
+                                @else
+                                    <x-text-input id="CIDate" name="CIDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('CIDate')" />
+                                    <x-input-error :messages="$errors->get('CIDate')" class="mt-2" />
+                                @endif
+                            </div>
+
+                            <div>
+                                <x-input-label for="BLNo" value="BL number" />
+                                <x-text-input id="BLNo" name="BLNo" type="text" class="mt-1 block w-full"
+                                              :value="old('BLNo', $order->BLNo)" />
+                                <x-input-error :messages="$errors->get('BLNo')" class="mt-2" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="BLDate" value="BL Date" />
+                                @if(isset($order->BLDate))
+                                    <x-text-input id="BLDate" name="BLDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('BLDate', $order->BLDate->format('Y-m-d'))" />
+                                    <x-input-error :messages="$errors->get('BLDate')" class="mt-2" />
+                                @else
+                                    <x-text-input id="BLDate" name="BLDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('BLDate')" />
+                                    <x-input-error :messages="$errors->get('BLDate')" class="mt-2" />
+                                @endif
+                            </div>
+
+                            <div>
+                                <x-input-label for="BPValue" value="Balance Value" />
+                                <x-text-input id="BPValue" name="BPValue" type="text" class="mt-1 block w-full"
+                                              :value="old('BPValue', $order->BPValue)" />
+                                <x-input-error :messages="$errors->get('BPValue')" class="mt-2" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="BPDate" value="BP Date" />
+                                @if(isset($order->BPDate))
+                                    <x-text-input id="BPDate" name="BPDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('BPDate', $order->BPDate->format('Y-m-d'))" />
+                                    <x-input-error :messages="$errors->get('BPDate')" class="mt-2" />
+                                @else
+                                    <x-text-input id="BPDate" name="BPDate" type="date" class="mt-1 block w-full"
+                                                  :value="old('BPDate')" />
+                                    <x-input-error :messages="$errors->get('BPDate')" class="mt-2" />
+                                @endif
+                            </div>
+
+                            <div>
+                                <x-input-label for="ETA" value="ETA Date" />
+                                @if(isset($order->ETA))
+                                    <x-text-input id="ETA" name="ETA" type="date" class="mt-1 block w-full"
+                                                  :value="old('ETA', $order->ETA->format('Y-m-d'))" />
+                                    <x-input-error :messages="$errors->get('ETA')" class="mt-2" />
+                                @else
+                                    <x-text-input id="ETA" name="ETA" type="date" class="mt-1 block w-full"
+                                                  :value="old('ETA')" />
+                                    <x-input-error :messages="$errors->get('ETA')" class="mt-2" />
+                                @endif
+                            </div>
+
+
+
                             <!-- Rest of the fields following the same pattern -->
                             <!-- ... -->
 

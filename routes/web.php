@@ -3,13 +3,15 @@
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Orders;
 
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 
 Route::get('/', function () {
-    return view('dashboard');
+    $orders=Orders::all();
+    return view('dashboard', compact('orders'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
